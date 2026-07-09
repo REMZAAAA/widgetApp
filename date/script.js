@@ -1,13 +1,18 @@
 // what I want in the end : 
 // how many days in total in the current month
-// name of the day (Monday, Tuesday, ...)
 // the day (number)
+// name of the day (Monday, Tuesday, ...)
+// name of the month (January, February, ...)
 
 const date = new Date();
-const [monthNumber, dayNumber, yearNumber] = [
+const lang = "en-US";
+
+const [monthNumber, dayNumber, yearNumber, monthName, dayName] = [
     date.getMonth()+ 1, // start at 0 (january).
     date.getDate(),
     date.getFullYear(),
+    date.toLocaleDateString(lang, {weekday: "long"}),
+    date.toLocaleDateString(lang, {month: "long"}),
 ]
 
 // const monthDaysNumber = Array(12);
@@ -111,4 +116,7 @@ howManyDayInTest();
 
 const currentMonthDaysNumber = howManyDayIn(monthNumber);
 console.log(currentMonthDaysNumber, monthNumber);
+
+console.log(dayName);
+console.log(monthName);
 
