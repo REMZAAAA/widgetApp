@@ -1,0 +1,24 @@
+{
+  "name": "widgetapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/REMZAAAA/widgetApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/REMZAAAA/widgetApp/issues"
+  },
+  "homepage": "https://github.com/REMZAAAA/widgetApp#readme",
+  "dependencies": {
+    "electron": "^43.1.0"
+  }
+}

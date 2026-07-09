@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: transparent;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.widget {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(20, 20, 20, 0.85);
+  color: white;
+  -webkit-app-region: drag;
+}
+
+button {
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}

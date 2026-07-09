@@ -1,0 +1,12 @@
+{
+  "name": "date",
+  "version": "1.0.0",
+  "description": "Widget bureau Windows pour la date en Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^latest"
+  }
+}
