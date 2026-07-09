@@ -1,25 +1,47 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  margin: 0;
   background: transparent;
-  font-family: Arial, sans-serif;
   overflow: hidden;
-}
-
-.widget {
-  width: 100vw;
   height: 100vh;
-  padding: 20px;
-  border-radius: 20px;
-  background: rgba(20, 20, 20, 0.85);
-  color: white;
-  -webkit-app-region: drag;
 }
 
-button {
-  -webkit-app-region: no-drag;
-  cursor: pointer;
+#date{
+  background-color: red;
+  display: flex; 
+  flex-direction: column;
+  align-items: c;
+  gap: 5px;
+
+  height: 100%;
+  width: min-content;
+}
+
+#date>div{
+  background-color: lime;
+  flex: 1;
+  width: min-content;
+}
+
+#date>div.active{
+  background-color: green;
+  flex: 4;
+
+  display: flex;
+  padding-inline: 10px;
+  gap: 10px;
+}
+#date>div.active h3{
+  justify-content: end;
+  display: flex; flex-direction: column;
+  background-color: yellow;
+  width: 80px;
+}
+#date>div.active h3 span:nth-of-type(2){
+  background-color: orange;
+  text-align: right;
 }
