@@ -1,47 +1,112 @@
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+:root{
+  --font-height: 24px;
+  --number-height: 18px;
+  --font-size: 16px;
+
+  --text-color: white;
+  --text-color-acc: #871939;
+  --background-color: 0, 0, 0; /* xxx, xxx, xxx */
+  --background-opacity: 0; /* alpha */
+
 }
 
 body {
-  background: transparent;
-  overflow: hidden;
   height: 100vh;
+  width: min-content;
+  overflow: hidden;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--text-color);
+
+  font-size: var(--font-size);
+  line-height: var(--font-height);
+
+  font-family: monospace;
 }
 
 #date{
-  background-color: red;
   display: flex; 
   flex-direction: column;
   align-items: c;
-  gap: 5px;
+  gap: 0px;
 
-  height: 100%;
-  width: min-content;
+  height: max-content;
+  width: 100%;
+  
+  -webkit-app-region: drag;
+  app-region: drag;
+
+  background-color: rgba(var(--background-color), var(--background-opacity));
 }
 
 #date>div{
-  background-color: lime;
   flex: 1;
-  width: min-content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, var(--number-height));
+
+  min-width: max-content;
+  /* background-color: lime; */
+}
+#date>div>h4{
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+
+  /* background-color: orange; */
 }
 
 #date>div.active{
-  background-color: green;
-  flex: 4;
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, var(--number-height));
+
+  height: auto;
+  font-weight: bold;
+  color: var(--text-color-acc);
+  /* background-color: green; */
+}
+#date>div.active h1{
+  grid-column: 1 / 2;
+  grid-row: 1 / 5;
 
   display: flex;
-  padding-inline: 10px;
-  gap: 10px;
+  justify-content: center; align-items: center;
+  /* background-color: orange; */
+  font-size: 64px;
 }
-#date>div.active h3{
-  justify-content: end;
-  display: flex; flex-direction: column;
-  background-color: yellow;
-  width: 80px;
+
+#date>div.active h2{
+  grid-column: 2 / 4;
+  grid-row: 3 / 5;
+
+  display: flex;
+  gap: var(--font-size);
+  padding-right: var(--font-size);
+
+  /* background-color: yellow; */
 }
-#date>div.active h3 span:nth-of-type(2){
-  background-color: orange;
-  text-align: right;
+#date>div.active h2 span:nth-of-type(1){
+  height: 100%;
+  /* background-color: cyan; */
+}
+#date>div.active h2 span:nth-of-type(2){
+  display: flex;
+  align-items: end;
+  /* background-color: blue; */
 }

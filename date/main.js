@@ -1,9 +1,11 @@
 const { app, BrowserWindow } = require("electron");
 
 function createWindow() {
+  const { height } = screen.getPrimaryDisplay().workAreaSize;
+
   const win = new BrowserWindow({
     width: 320,
-    height: 180,
+    height: height,
     frame: false,
     transparent: true,
     alwaysOnTop: true,

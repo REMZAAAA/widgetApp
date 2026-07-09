@@ -120,3 +120,13 @@ console.log(currentMonthDaysNumber, monthNumber);
 console.log(dayName);
 console.log(monthName);
 
+// create the elements
+
+const widget = document.getElementById("date")
+
+for (let i = 1; i < currentMonthDaysNumber; i++) {
+    // const el = document.createElement("div");
+    // widget.appendChild();
+    break;
+}
+
