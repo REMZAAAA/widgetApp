@@ -122,11 +122,39 @@ console.log(monthName);
 
 // create the elements
 
-const widget = document.getElementById("date")
+const widget = document.getElementById("date");
 
-for (let i = 1; i < currentMonthDaysNumber; i++) {
-    // const el = document.createElement("div");
-    // widget.appendChild();
-    break;
+function createDateWidget(){
+    for (let i = 1; i < currentMonthDaysNumber; i++) {
+        const div = document.createElement("div");
+
+        if (i === dayNumber) {
+            const h1 = document.createElement("h1");
+            const h3 = document.createElement("h3");
+            const spanMonth = document.createElement("span");
+            const spanDay = document.createElement("span");
+
+            div.classList.add("active");
+            h1.innerHTML = i;
+            spanMonth.innerHTML = monthName;
+            spanDay.innerHTML = dayName;
+
+            div.appendChild(h1);
+            h3.appendChild(spanDay);
+            h3.appendChild(spanMonth);
+            div.appendChild(h3);
+        } else{
+            const p = document.createElement("p");
+            p.innerHTML = i;
+
+            div.appendChild(p);
+        }
+        
+        widget.appendChild(div);
+    }
 }
+
+createDateWidget();
+
+
 
